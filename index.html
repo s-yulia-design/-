@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Профессиональная ориентация и карьерное консультирование. Помогу выбрать профессию, раскрыть сильные стороны и составить карьерный план.">
+  <meta name="keywords" content="профориентация, карьерный консультант, выбор профессии, карьерная консультация">
+  <title>Екатерина — профориентация и карьерное консультирование</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Профориентация и карьерное консультирование — Екатерина",
+    "description": "Карьерные консультации, профориентация подростков и взрослых, составление карьерного плана",
+    "areaServed": "RU",
+    "serviceType": ["Профориентация", "Карьерное консультирование"]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <a class="logo" href="#top">Екатерина<span class="logo__dot">.</span></a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Открыть меню">
+      <label for="nav-toggle" class="nav-toggle-btn" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </label>
+      <nav class="nav" aria-label="Основная навигация">
+        <a href="#about">Обо мне</a>
+        <a href="#services">Услуги</a>
+        <a href="#process">Как работаем</a>
+        <a href="#reviews">Отзывы</a>
+        <a href="#blog">Блог</a>
+        <a href="#faq">FAQ</a>
+        <a href="#booking" class="nav__cta">Записаться</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <p class="hero__label">Карьерный консультант · профориентолог</p>
+          <h1 id="hero-title">Найдите профессию, в&nbsp;которой вы&nbsp;раскроетесь</h1>
+          <p class="hero__subtitle">Помогаю подросткам, студентам и взрослым осознанно выбрать путь, опереться на сильные стороны и выстроить реалистичный карьерный план без давления и шаблонов.</p>
+          <div class="hero__actions">
+            <a href="#booking" class="btn btn--primary">Записаться на консультацию</a>
+            <a href="#services" class="btn btn--ghost">Смотреть услуги</a>
+          </div>
+          <ul class="hero__stats" aria-label="Ключевые показатели">
+            <li><strong>8+</strong><span>лет практики</span></li>
+            <li><strong>500+</strong><span>клиентов</span></li>
+            <li><strong>92%</strong><span>довольны результатом</span></li>
+          </ul>
+        </div>
+        <figure class="hero__visual">
+          <div class="hero__frame">
+            <img src="IMG_3401.jpeg" alt="Екатерина — специалист по профориентации и карьерному консультированию" width="480" height="640" fetchpriority="high">
+          </div>
+          <figcaption class="hero__badge">Индивидуальный подход к каждому запросу</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- О специалисте -->
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <header class="section__header">
+          <span class="section__tag">Обо мне</span>
+          <h2 id="about-title">Экспертность, основанная на практике и заботе</h2>
+          <p class="section__lead">Я сопровождаю людей на этапе выбора профессии и смены карьеры — от первого разговора до конкретного плана действий.</p>
+        </header>
+        <div class="about__grid">
+          <article class="card">
+            <h3>Опыт</h3>
+            <p>Более 8 лет в профориентации и карьерном консультировании. Работаю с подростками, студентами, родителями и специалистами в кризисе или на пороге смены сферы.</p>
+          </article>
+          <article class="card">
+            <h3>Сертификаты</h3>
+            <p>Профильное образование в психологии и карьерном коучинге, сертификация по методикам оценки компетенций и профориентационным тестам.</p>
+          </article>
+          <article class="card">
+            <h3>Методика</h3>
+            <p>Комбинирую диагностику сильных сторон, ценностный анализ и практические инструменты — без навязывания «единственно верной» профессии.</p>
+          </article>
+          <article class="card card--accent">
+            <h3>Преимущества</h3>
+            <ul>
+              <li>Безопасное пространство для честного диалога</li>
+              <li>Конкретные шаги, а не абстрактные советы</li>
+              <li>Онлайн и очно — как вам удобнее</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Услуги -->
+    <section class="section services" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <header class="section__header section__header--center">
+          <span class="section__tag">Услуги</span>
+          <h2 id="services-title">Форматы работы под ваш запрос</h2>
+        </header>
+        <div class="services__grid">
+          <article class="service-card">
+            <span class="service-card__num">01</span>
+            <h3>Карьерная консультация</h3>
+            <p>Разбор текущей ситуации, целей и барьеров. 90 мин · от 5 000 ₽</p>
+            <a href="#booking" class="service-card__link">Записаться →</a>
+          </article>
+          <article class="service-card">
+            <span class="service-card__num">02</span>
+            <h3>Профориентация подростков</h3>
+            <p>Для школьников 14–18 лет и родителей. 3–5 встреч · от 18 000 ₽</p>
+            <a href="#booking" class="service-card__link">Записаться →</a>
+          </article>
+          <article class="service-card">
+            <span class="service-card__num">03</span>
+            <h3>Разбор сильных сторон</h3>
+            <p>Диагностика талантов и зон роста. 60 мин · от 4 500 ₽</p>
+            <a href="#booking" class="service-card__link">Записаться →</a>
+          </article>
+          <article class="service-card">
+            <span class="service-card__num">04</span>
+            <h3>Помощь в выборе профессии</h3>
+            <p>Сравнение направлений, вузов и треков. пакет · от 12 000 ₽</p>
+            <a href="#booking" class="service-card__link">Записаться →</a>
+          </article>
+          <article class="service-card service-card--wide">
+            <span class="service-card__num">05</span>
+            <h3>Составление карьерного плана</h3>
+            <p>Пошаговая дорожная карта на 6–12 месяцев с контрольными точками. от 15 000 ₽</p>
+            <a href="#booking" class="btn btn--primary btn--sm">Обсудить программу</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Как проходит работа -->
+    <section class="section process" id="process" aria-labelledby="process-title">
+      <div class="container">
+        <header class="section__header">
+          <span class="section__tag">Процесс</span>
+          <h2 id="process-title">Как проходит работа</h2>
+        </header>
+        <ol class="process__steps">
+          <li>
+            <span class="process__step-num">1</span>
+            <h3>Заявка и знакомство</h3>
+            <p>Вы оставляете заявку — я связываюсь в течение 24 часов, уточняю запрос и формат.</p>
+          </li>
+          <li>
+            <span class="process__step-num">2</span>
+            <h3>Диагностика</h3>
+            <p>Тесты, интервью, анализ интересов и ценностей — в комфортном темпе.</p>
+          </li>
+          <li>
+            <span class="process__step-num">3</span>
+            <h3>Сессии и разбор</h3>
+            <p>Онлайн (Zoom) или очно. 60–90 минут, фокус на ваших вопросах.</p>
+          </li>
+          <li>
+            <span class="process__step-num">4</span>
+            <h3>Результат</h3>
+            <p>Рекомендации, список профессий/направлений, план действий и материалы для самостоятельной работы.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Отзывы -->
+    <section class="section reviews" id="reviews" aria-labelledby="reviews-title">
+      <div class="container">
+        <header class="section__header section__header--center">
+          <span class="section__tag">Отзывы</span>
+          <h2 id="reviews-title">Что говорят клиенты</h2>
+        </header>
+        <div class="reviews__grid">
+          <blockquote class="review">
+            <p>«Сын наконец понял, куда поступать — без скандалов дома. Екатерина нашла общий язык с подростком с первой встречи.»</p>
+            <footer>— Марина, мама ученика 11 класса</footer>
+          </blockquote>
+          <blockquote class="review">
+            <p>«После 10 лет в бухгалтерии я боялась менять сферу. Получила ясный план перехода в аналитику — уже прохожу обучение.»</p>
+            <footer>— Анна, 34 года</footer>
+          </blockquote>
+          <blockquote class="review">
+            <p>«Структурно, тепло и по делу. Не «волшебная таблетка», а реальные инструменты для выбора профессии.»</p>
+            <footer>— Дмитрий, студент 2 курса</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- Кейсы -->
+    <section class="section cases" id="cases" aria-labelledby="cases-title">
+      <div class="container">
+        <header class="section__header">
+          <span class="section__tag">Результаты</span>
+          <h2 id="cases-title">Кейсы и достижения клиентов</h2>
+        </header>
+        <div class="cases__grid">
+          <article class="case-card">
+            <h3>Школьница, 16 лет</h3>
+            <p class="case-card__result">Выбрала направление дизайна и медиа, поступила на целевую программу.</p>
+            <span class="case-card__meta">4 сессии · 2 месяца</span>
+          </article>
+          <article class="case-card">
+            <h3>IT-специалист, 28 лет</h3>
+            <p class="case-card__result">Перешёл в продуктовую роль с ростом дохода на 40% за полгода.</p>
+            <span class="case-card__meta">Карьерный план · 6 месяцев</span>
+          </article>
+          <article class="case-card">
+            <h3>Родители + подросток</h3>
+            <p class="case-card__result">Согласовали ожидания, снизили тревогу перед ЕГЭ и выбором вуза.</p>
+            <span class="case-card__meta">Семейный формат · 5 встреч</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Блог -->
+    <section class="section blog" id="blog" aria-labelledby="blog-title">
+      <div class="container">
+        <header class="section__header">
+          <span class="section__tag">Блог</span>
+          <h2 id="blog-title">Полезные материалы</h2>
+        </header>
+        <div class="blog__grid">
+          <article class="blog-card">
+            <time datetime="2026-05-10">10 мая 2026</time>
+            <h3><a href="#">Как говорить с подростком о будущем без давления</a></h3>
+            <p>Практические фразы и ошибки, которых стоит избегать родителям.</p>
+          </article>
+          <article class="blog-card">
+            <time datetime="2026-04-22">22 апреля 2026</time>
+            <h3><a href="#">5 признаков, что пора к карьерному консультанту</a></h3>
+            <p>Когда самостоятельный поиск перестаёт работать.</p>
+          </article>
+          <article class="blog-card">
+            <time datetime="2026-03-15">15 марта 2026</time>
+            <h3><a href="#">Профориентационные тесты: что они реально показывают</a></h3>
+            <p>Разбираем мифы и ограничения популярных методик.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq" id="faq" aria-labelledby="faq-title">
+      <div class="container faq__inner">
+        <header class="section__header">
+          <span class="section__tag">FAQ</span>
+          <h2 id="faq-title">Частые вопросы</h2>
+        </header>
+        <div class="faq__list">
+          <details class="faq__item">
+            <summary>С какого возраста можно начинать профориентацию?</summary>
+            <p>Оптимально с 14–15 лет, когда формируются интересы к будущему. Для взрослых возраст не ограничен.</p>
+          </details>
+          <details class="faq__item">
+            <summary>Консультации только онлайн?</summary>
+            <p>Нет — доступны онлайн-встречи и очные сессии (по договорённости в вашем городе).</p>
+          </details>
+          <details class="faq__item">
+            <summary>Сколько встреч обычно нужно?</summary>
+            <p>От одной разовой консультации до программы из 5–8 встреч — зависит от запроса.</p>
+          </details>
+          <details class="faq__item">
+            <summary>Можно ли прийти вместе с родителем/партнёром?</summary>
+            <p>Да, семейный формат возможен — обсудим это на этапе записи.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Форма записи -->
+    <section class="section booking" id="booking" aria-labelledby="booking-title">
+      <div class="container booking__grid">
+        <div class="booking__info">
+          <span class="section__tag">Запись</span>
+          <h2 id="booking-title">Готовы сделать первый шаг?</h2>
+          <p>Оставьте заявку — я свяжусь с вами в Telegram, WhatsApp или по email в течение 24 часов.</p>
+          <div class="booking__messengers">
+            <a href="https://t.me/" class="messenger-link" target="_blank" rel="noopener noreferrer">Telegram</a>
+            <a href="https://wa.me/" class="messenger-link" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+          </div>
+        </div>
+        <form class="booking__form" action="#" method="post">
+          <label class="hp" aria-hidden="true">
+            <input type="text" name="website" tabindex="-1" autocomplete="off">
+          </label>
+          <label>
+            <span>Ваше имя</span>
+            <input type="text" name="name" required autocomplete="name" placeholder="Как к вам обращаться">
+          </label>
+          <label>
+            <span>Телефон или мессенджер</span>
+            <input type="tel" name="phone" required autocomplete="tel" placeholder="+7 (___) ___-__-__">
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" autocomplete="email" placeholder="email@example.com">
+          </label>
+          <label>
+            <span>Чем могу помочь?</span>
+            <select name="service">
+              <option value="">Выберите услугу</option>
+              <option>Карьерная консультация</option>
+              <option>Профориентация подростков</option>
+              <option>Разбор сильных сторон</option>
+              <option>Выбор профессии</option>
+              <option>Карьерный план</option>
+            </select>
+          </label>
+          <label>
+            <span>Комментарий</span>
+            <textarea name="message" rows="3" placeholder="Кратко опишите ваш запрос"></textarea>
+          </label>
+          <button type="submit" class="btn btn--primary btn--full">Отправить заявку</button>
+          <p class="form-note">Нажимая кнопку, вы соглашаетесь на обработку персональных данных.</p>
+        </form>
+      </div>
+    </section>
+
+    <!-- Контакты -->
+    <section class="section contacts" id="contacts" aria-labelledby="contacts-title">
+      <div class="container contacts__inner">
+        <h2 id="contacts-title" class="visually-hidden">Контакты</h2>
+        <div class="contacts__item">
+          <span class="contacts__label">Email</span>
+          <a href="mailto:hello@example.com">hello@example.com</a>
+        </div>
+        <div class="contacts__item">
+          <span class="contacts__label">Соцсети</span>
+          <div class="contacts__social">
+            <a href="#" aria-label="Telegram">TG</a>
+            <a href="#" aria-label="ВКонтакте">VK</a>
+          </div>
+        </div>
+        <p class="contacts__copy">© 2026 Екатерина. Профориентация и карьерное консультирование.</p>
+      </div>
+    </section>
+  </main>
+
+  <a href="#top" class="back-top" aria-label="Наверх">↑</a>
+</body>
+</html>
