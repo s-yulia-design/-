@@ -45,18 +45,34 @@
 
   <main id="main">
     <!-- Hero -->
-    <section class="hero hero--banner" aria-label="Главный экран">
-      <div class="hero__banner-wrap">
-        <a href="#booking" class="hero__banner-link">
-          <img
-            class="hero__banner"
-            src="hero-banner.png"
-            alt="Понимание себя — путь к карьере и жизни, которые вдохновляют. Помогаю найти своё дело, раскрыть таланты и выстроить карьеру. Записаться на консультацию."
-            width="1536"
-            height="1024"
-            fetchpriority="high"
-          >
-        </a>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <p class="hero__label">Карьерный консультант · профориентолог</p>
+          <h1 id="hero-title">Найдите профессию, в&nbsp;которой вы&nbsp;раскроетесь</h1>
+          <p class="hero__subtitle">Помогаю подросткам, студентам и взрослым осознанно выбрать путь, опереться на сильные стороны и выстроить реалистичный карьерный план без давления и шаблонов.</p>
+          <div class="hero__actions">
+            <a href="#booking" class="btn btn--primary">Записаться на консультацию</a>
+            <a href="#services" class="btn btn--ghost">Смотреть услуги</a>
+          </div>
+          <ul class="hero__stats" aria-label="Ключевые показатели">
+            <li><strong>8+</strong><span>лет практики</span></li>
+            <li><strong>500+</strong><span>клиентов</span></li>
+            <li><strong>92%</strong><span>довольны результатом</span></li>
+          </ul>
+        </div>
+        <figure class="hero__visual">
+          <div class="hero__frame">
+            <img
+              src="proforientolog_hero_cursor_ready.jpg"
+              alt="Понимание себя — путь к карьере и жизни, которые вдохновляют"
+              width="640"
+              height="480"
+              fetchpriority="high"
+            >
+          </div>
+          <figcaption class="hero__badge">Индивидуальный подход к каждому запросу</figcaption>
+        </figure>
       </div>
     </section>
 
