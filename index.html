@@ -37,6 +37,7 @@
         <a href="#process">Как работаем</a>
         <a href="#reviews">Отзывы</a>
         <a href="#blog">Блог</a>
+        <a href="#quiz">Квиз</a>
         <a href="#faq">FAQ</a>
         <a href="#booking" class="nav__cta">Записаться</a>
       </nav>
@@ -53,6 +54,7 @@
           <p class="hero__subtitle">Помогаю подросткам, студентам и взрослым осознанно выбрать путь, опереться на сильные стороны и выстроить реалистичный карьерный план без давления и шаблонов.</p>
           <div class="hero__actions">
             <a href="#booking" class="btn btn--primary">Записаться на консультацию</a>
+            <a href="#quiz" class="btn btn--ghost">Карта профессий за 5 мин</a>
             <a href="#services" class="btn btn--ghost">Смотреть услуги</a>
           </div>
           <ul class="hero__stats" aria-label="Ключевые показатели">
@@ -289,6 +291,18 @@
       </div>
     </section>
 
+    <!-- Квиз -->
+    <section class="section quiz" id="quiz" aria-labelledby="quiz-title">
+      <div class="container quiz__inner">
+        <header class="section__header section__header--center">
+          <span class="section__tag">Квиз</span>
+          <h2 id="quiz-title">Карта профессий за 5 минут</h2>
+          <p class="section__lead">Узнайте свой профессиональный профиль и получите ориентиры для следующего шага</p>
+        </header>
+        <div id="quiz-panel" class="quiz__panel" aria-live="polite"></div>
+      </div>
+    </section>
+
     <!-- Форма записи -->
     <section class="section booking" id="booking" aria-labelledby="booking-title">
       <div class="container booking__grid">
@@ -359,5 +373,8 @@
   </main>
 
   <a href="#top" class="back-top" aria-label="Наверх">↑</a>
+
+  <script src="quiz-data.js" defer></script>
+  <script src="quiz.js" defer></script>
 </body>
 </html>
