@@ -135,25 +135,9 @@
     optionsWrap.setAttribute("role", "listbox");
     optionsWrap.setAttribute("aria-label", question.text);
 
-    state.selectedOption = savedAnswer !== undefined ? savedAnswer : null;
-
-    question.options.forEach(function (option, index) {
-      const optionBtn = createEl("button", "quiz__option", option.text);
-      optionBtn.type = "button";
-      optionBtn.setAttribute("role", "option");
-      optionBtn.setAttribute("aria-selected", state.selectedOption === index ? "true" : "false");
-
-      if (state.selectedOption === index) {
-        optionBtn.classList.add("quiz__option--selected");
-      }
-
-      optionBtn.addEventListener("click", function () {
-        state.selectedOption = index;
-        renderQuestion();
-      });
-
-      optionsWrap.appendChild(optionBtn);
-    });
+    if (savedAnswer !== undefined) {
+      state.selectedOption = savedAnswer;
+    }
 
     const actions = createEl("div", "quiz__actions");
     const backBtn = createEl("button", "btn btn--ghost quiz__btn-back", "Назад");
@@ -182,6 +166,28 @@
         state.selectedOption = state.answers[state.step] ?? null;
       }
       render();
+    });
+
+    question.options.forEach(function (option, index) {
+      const optionBtn = createEl("button", "quiz__option", option.text);
+      optionBtn.type = "button";
+      optionBtn.setAttribute("role", "option");
+      optionBtn.setAttribute("aria-selected", state.selectedOption === index ? "true" : "false");
+
+      if (state.selectedOption === index) {
+        optionBtn.classList.add("quiz__option--selected");
+      }
+
+      optionBtn.addEventListener("click", function () {
+        state.selectedOption = index;
+        optionsWrap.querySelectorAll(".quiz__option").forEach(function (btn, i) {
+          btn.classList.toggle("quiz__option--selected", i === index);
+          btn.setAttribute("aria-selected", i === index ? "true" : "false");
+        });
+        nextBtn.disabled = false;
+      });
+
+      optionsWrap.appendChild(optionBtn);
     });
 
     actions.append(backBtn, nextBtn);
@@ -328,8 +334,11 @@
       if (next >= options.length) next = 0;
 
       state.selectedOption = next;
-      renderQuestion();
-      options[next].focus();
+      render();
+      const freshOptions = panel.querySelectorAll(".quiz__option");
+      if (freshOptions[next]) {
+        freshOptions[next].focus();
+      }
     }
   }
 
