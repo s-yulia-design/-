@@ -3,21 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Профессиональная ориентация и карьерное консультирование. Помогу выбрать профессию, раскрыть сильные стороны и составить карьерный план.">
-  <meta name="keywords" content="профориентация, карьерный консультант, выбор профессии, карьерная консультация">
-  <title>Екатерина Карачунова — профориентация и карьерное консультирование</title>
+  <meta name="description" content="Профориентация подростков и карьерные консультации для взрослых онлайн по России. Екатерина Карачунова — опыт в бизнесе и антикризисном консультировании.">
+  <title>Профориентация и карьерные консультации — Екатерина Карачунова</title>
+  <link rel="canonical" href="https://ek-uprof.ru/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:title" content="Профориентация и карьерные консультации — Екатерина Карачунова">
+  <meta property="og:description" content="Помогаю подросткам и взрослым разобраться в интересах и вариантах развития без давления и случайного выбора.">
+  <meta property="og:url" content="https://ek-uprof.ru/">
+  <meta property="og:image" content="https://ek-uprof.ru/images/social/og-default.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Профориентация — Екатерина Карачунова">
+  <meta name="twitter:description" content="Профориентация подростков и карьерные консультации онлайн.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="site.webmanifest">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/responsive.css">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "Профориентация и карьерное консультирование — Екатерина Карачунова",
-    "description": "Карьерные консультации, профориентация подростков и взрослых, составление карьерного плана",
-    "areaServed": "RU",
-    "serviceType": ["Профориентация", "Карьерное консультирование"]
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "name": "Екатерина Карачунова — профориентация",
+        "url": "https://ek-uprof.ru/"
+      },
+      {
+        "@type": "Person",
+        "name": "Екатерина Карачунова",
+        "jobTitle": "Карьерный консультант и профориентолог",
+        "url": "https://ek-uprof.ru/"
+      },
+      {
+        "@type": "ProfessionalService",
+        "name": "Профориентация и карьерное консультирование — Екатерина Карачунова",
+        "description": "Профориентация подростков и карьерные консультации для взрослых",
+        "areaServed": "RU",
+        "serviceType": ["Профориентация", "Карьерное консультирование"]
+      }
+    ]
   }
   </script>
 </head>
@@ -26,92 +54,111 @@
 
   <header class="header" id="top">
     <div class="container header__inner">
-      <a class="logo" href="#top">Екатерина Карачунова<span class="logo__dot">.</span></a>
-      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Открыть меню">
-      <label for="nav-toggle" class="nav-toggle-btn" aria-hidden="true">
+      <a class="logo" href="index.html"><span data-site-full-name>Екатерина Карачунова</span><span class="logo__dot">.</span></a>
+      <button type="button" class="nav-toggle-btn" data-nav-toggle aria-expanded="false" aria-controls="site-nav" aria-label="Открыть меню">
         <span></span><span></span><span></span>
-      </label>
-      <nav class="nav" aria-label="Основная навигация">
+      </button>
+      <nav class="nav" id="site-nav" data-site-nav aria-label="Основная навигация">
         <a href="#about">Обо мне</a>
         <a href="#services">Услуги</a>
         <a href="#process">Как работаем</a>
-        <a href="#reviews">Отзывы</a>
-        <a href="#blog">Блог</a>
         <a href="#quiz">Квиз</a>
         <a href="#faq">FAQ</a>
-        <a href="#booking" class="nav__cta">Записаться</a>
+        <a href="#booking" class="nav__cta" data-analytics-cta="primary_cta_click">Записаться</a>
       </nav>
     </div>
   </header>
 
   <main id="main">
-    <!-- Hero -->
     <section class="hero" aria-labelledby="hero-title">
       <div class="container hero__grid">
         <div class="hero__content">
           <p class="hero__label">Карьерный консультант · профориентолог</p>
-          <h1 id="hero-title">Найдите профессию, в&nbsp;которой вы&nbsp;раскроетесь</h1>
-          <p class="hero__subtitle">Помогаю подросткам, студентам и взрослым осознанно выбрать путь, опереться на сильные стороны и выстроить реалистичный карьерный план без давления и шаблонов.</p>
+          <h1 id="hero-title">Найдите профессиональный путь, который подходит именно вам</h1>
+          <p class="hero__subtitle">Помогаю подросткам и взрослым разобраться в интересах, сильных сторонах и вариантах развития, чтобы принять осознанное решение без давления и случайного выбора.</p>
           <div class="hero__actions">
-            <a href="#booking" class="btn btn--primary">Записаться на консультацию</a>
-            <a href="#quiz" class="btn btn--ghost">Карта профессий за 5 мин</a>
-            <a href="#services" class="btn btn--ghost">Смотреть услуги</a>
+            <a href="#booking" class="btn btn--primary" data-analytics-cta="primary_cta_click">Записаться на консультацию</a>
+            <a href="#quiz" class="btn btn--ghost">Пройти короткий тест</a>
           </div>
-          <ul class="hero__stats" aria-label="Ключевые показатели">
-            <li><strong>8+</strong><span>лет практики</span></li>
-            <li><strong>500+</strong><span>клиентов</span></li>
-            <li><strong>92%</strong><span>довольны результатом</span></li>
+          <ul class="hero__stats" aria-label="Опыт в бизнесе">
+            <li><strong>25+</strong><span>лет в бизнесе и управлении</span></li>
+            <li><span>в том числе антикризисное консультирование</span></li>
           </ul>
         </div>
         <figure class="hero__visual">
           <div class="hero__frame">
-            <img
-              src="proforientolog_hero_cursor_ready.jpg"
-              alt="Понимание себя — путь к карьере и жизни, которые вдохновляют"
-              width="640"
-              height="480"
-              fetchpriority="high"
-            >
+            <!-- Замените файл images/expert/photo.webp на реальное фото Екатерины -->
+            <div class="hero__photo-placeholder" role="img" aria-label="Фото специалиста будет добавлено">
+              Фото специалиста появится здесь<br><small>images/expert/photo.webp</small>
+            </div>
           </div>
-          <figcaption class="hero__badge">Индивидуальный подход к каждому запросу</figcaption>
+          <figcaption class="hero__badge">Индивидуальный подход к вашему запросу</figcaption>
         </figure>
       </div>
     </section>
 
-    <!-- О специалисте -->
-    <section class="section about" id="about" aria-labelledby="about-title">
+    <section class="section audience" id="audience" aria-labelledby="audience-title">
       <div class="container">
-        <header class="section__header">
-          <span class="section__tag">Обо мне</span>
-          <h2 id="about-title">Экспертность, основанная на практике и заботе</h2>
-          <p class="section__lead">Я сопровождаю людей на этапе выбора профессии и смены карьеры — от первого разговора до конкретного плана действий.</p>
+        <header class="section__header section__header--center">
+          <span class="section__tag">Кому подходит</span>
+          <h2 id="audience-title">Выберите свой формат запроса</h2>
         </header>
-        <div class="about__grid">
-          <article class="card">
-            <h3>Опыт</h3>
-            <p>Более 8 лет в профориентации и карьерном консультировании. Работаю с подростками, студентами, родителями и специалистами в кризисе или на пороге смены сферы.</p>
-          </article>
-          <article class="card">
-            <h3>Сертификаты</h3>
-            <p>Профильное образование в психологии и карьерном коучинге, сертификация по методикам оценки компетенций и профориентационным тестам.</p>
-          </article>
-          <article class="card">
-            <h3>Методика</h3>
-            <p>Комбинирую диагностику сильных сторон, ценностный анализ и практические инструменты — без навязывания «единственно верной» профессии.</p>
-          </article>
-          <article class="card card--accent">
-            <h3>Преимущества</h3>
+        <div class="audience__grid">
+          <article class="audience-card">
+            <h3>Для подростков и родителей</h3>
             <ul>
-              <li>Безопасное пространство для честного диалога</li>
-              <li>Конкретные шаги, а не абстрактные советы</li>
-              <li>Онлайн и очно — как вам удобнее</li>
+              <li>выбор направления после школы;</li>
+              <li>выбор профиля обучения;</li>
+              <li>сравнение профессий и образовательных маршрутов;</li>
+              <li>снижение конфликтов и тревоги вокруг выбора;</li>
+              <li>совместная консультация с родителями.</li>
             </ul>
+            <a href="proforientaciya-podrostkov.html" class="btn btn--primary btn--sm" data-analytics-cta="teen_service_click">Профориентация подростка</a>
+          </article>
+          <article class="audience-card">
+            <h3>Для взрослых</h3>
+            <ul>
+              <li>смена профессии;</li>
+              <li>профессиональное выгорание;</li>
+              <li>поиск нового направления;</li>
+              <li>анализ сильных сторон;</li>
+              <li>план перехода в другую сферу.</li>
+            </ul>
+            <a href="karernaya-konsultaciya.html" class="btn btn--primary btn--sm" data-analytics-cta="adult_service_click">Карьерная консультация для взрослого</a>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- Услуги -->
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <header class="section__header">
+          <span class="section__tag">Обо мне</span>
+          <h2 id="about-title">Бизнес-опыт и новый фокус на профориентации</h2>
+          <p class="section__lead">Я только начинаю профессиональный путь профориентолога и карьерного консультанта, опираясь на многолетнюю практику в бизнесе.</p>
+        </header>
+        <div class="about__grid">
+          <article class="card">
+            <h3>Бизнес и антикризис</h3>
+            <p>Более 25 лет работаю в бизнесе, в том числе как антикризисный консультант. Хорошо понимаю кризисные аспекты компаний, их потребности в специалистах, требуемые навыки и реальные задачи рынка труда.</p>
+          </article>
+          <article class="card">
+            <h3>Профориентация</h3>
+            <p>Сейчас развиваю направление профориентации и карьерного сопровождения. Помогаю подросткам и взрослым структурировать выбор, опираясь на интересы, сильные стороны и реалистичные ограничения — без обещания «единственно верной» профессии.</p>
+          </article>
+          <article class="card">
+            <h3>Методика</h3>
+            <p>Сочетаю беседу, профориентационные инструменты и практический взгляд работодателя: что действительно ценится в профессии, какие компетенции стоит проверить и как выстроить следующие шаги.</p>
+          </article>
+          <article class="card card--accent">
+            <h3>Образование и сертификаты</h3>
+            <!-- НУЖНО ПОДТВЕРДИТЬ У ЕКАТЕРИНЫ -->
+            <p>Информация об образовании и сертификатах будет добавлена после подтверждения. Если вам важны конкретные дипломы или методики — обсудим это на первой встрече.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section class="section services" id="services" aria-labelledby="services-title">
       <div class="container">
         <header class="section__header section__header--center">
@@ -122,38 +169,37 @@
           <article class="service-card">
             <span class="service-card__num">01</span>
             <h3>Карьерная консультация</h3>
-            <p>Разбор текущей ситуации, целей и барьеров. 90 мин · от 5 000 ₽</p>
-            <a href="#booking" class="service-card__link">Записаться →</a>
+            <p>Разбор ситуации, целей и барьеров для взрослых. Стоимость зависит от формата и запроса.</p>
+            <a href="karernaya-konsultaciya.html" class="service-card__link">Подробнее →</a>
           </article>
           <article class="service-card">
             <span class="service-card__num">02</span>
             <h3>Профориентация подростков</h3>
-            <p>Для школьников 14–18 лет и родителей. 3–5 встреч · от 18 000 ₽</p>
-            <a href="#booking" class="service-card__link">Записаться →</a>
+            <p>Для школьников и родителей: выбор направления и образовательных маршрутов. Стоимость зависит от формата и запроса.</p>
+            <a href="proforientaciya-podrostkov.html" class="service-card__link">Подробнее →</a>
           </article>
           <article class="service-card">
             <span class="service-card__num">03</span>
             <h3>Разбор сильных сторон</h3>
-            <p>Диагностика талантов и зон роста. 60 мин · от 4 500 ₽</p>
+            <p>Структурирование талантов и зон роста. Стоимость зависит от формата и запроса.</p>
             <a href="#booking" class="service-card__link">Записаться →</a>
           </article>
           <article class="service-card">
             <span class="service-card__num">04</span>
             <h3>Помощь в выборе профессии</h3>
-            <p>Сравнение направлений, вузов и треков. пакет · от 12 000 ₽</p>
+            <p>Сравнение направлений и сценариев развития. Стоимость зависит от формата и запроса.</p>
             <a href="#booking" class="service-card__link">Записаться →</a>
           </article>
           <article class="service-card service-card--wide">
             <span class="service-card__num">05</span>
             <h3>Составление карьерного плана</h3>
-            <p>Пошаговая дорожная карта на 6–12 месяцев с контрольными точками. от 15 000 ₽</p>
+            <p>Дорожная карта с этапами и контрольными точками. Стоимость зависит от формата и запроса.</p>
             <a href="#booking" class="btn btn--primary btn--sm">Обсудить программу</a>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- Как проходит работа -->
     <section class="section process" id="process" aria-labelledby="process-title">
       <div class="container">
         <header class="section__header">
@@ -164,106 +210,36 @@
           <li>
             <span class="process__step-num">1</span>
             <h3>Заявка и знакомство</h3>
-            <p>Вы оставляете заявку — я связываюсь в течение 24 часов, уточняю запрос и формат.</p>
+            <p>Вы оставляете заявку или пишете напрямую — уточняем запрос, формат и ожидания.</p>
           </li>
           <li>
             <span class="process__step-num">2</span>
             <h3>Диагностика</h3>
-            <p>Тесты, интервью, анализ интересов и ценностей — в комфортном темпе.</p>
+            <p>Интервью, профориентационные инструменты, анализ интересов и ценностей — в комфортном темпе.</p>
           </li>
           <li>
             <span class="process__step-num">3</span>
             <h3>Сессии и разбор</h3>
-            <p>Онлайн (Zoom) или очно. 60–90 минут, фокус на ваших вопросах.</p>
+            <p>Онлайн-встречи. Длительность и количество сессий согласуем заранее.</p>
           </li>
           <li>
             <span class="process__step-num">4</span>
             <h3>Результат</h3>
-            <p>Рекомендации, список профессий/направлений, план действий и материалы для самостоятельной работы.</p>
+            <p>Ориентиры по направлениям, список гипотез для проверки и практические шаги. Это не гарантия конкретной профессии или поступления.</p>
           </li>
         </ol>
       </div>
     </section>
 
-    <!-- Отзывы -->
-    <section class="section reviews" id="reviews" aria-labelledby="reviews-title">
-      <div class="container">
-        <header class="section__header section__header--center">
-          <span class="section__tag">Отзывы</span>
-          <h2 id="reviews-title">Что говорят клиенты</h2>
-        </header>
-        <div class="reviews__grid">
-          <blockquote class="review">
-            <p>«Сын наконец понял, куда поступать — без скандалов дома. Екатерина Карачунова нашла общий язык с подростком с первой встречи.»</p>
-            <footer>— Марина, мама ученика 11 класса</footer>
-          </blockquote>
-          <blockquote class="review">
-            <p>«После 10 лет в бухгалтерии я боялась менять сферу. Получила ясный план перехода в аналитику — уже прохожу обучение.»</p>
-            <footer>— Анна, 34 года</footer>
-          </blockquote>
-          <blockquote class="review">
-            <p>«Структурно, тепло и по делу. Не «волшебная таблетка», а реальные инструменты для выбора профессии.»</p>
-            <footer>— Дмитрий, студент 2 курса</footer>
-          </blockquote>
-        </div>
-      </div>
-    </section>
+    <!-- Отзывы: скрыто. Шаблон поля: имя/обозначение, категория, текст, дата, согласие, скриншот -->
+    <section class="section reviews section--hidden" id="reviews" aria-hidden="true" hidden></section>
 
-    <!-- Кейсы -->
-    <section class="section cases" id="cases" aria-labelledby="cases-title">
-      <div class="container">
-        <header class="section__header">
-          <span class="section__tag">Результаты</span>
-          <h2 id="cases-title">Кейсы и достижения клиентов</h2>
-        </header>
-        <div class="cases__grid">
-          <article class="case-card">
-            <h3>Школьница, 16 лет</h3>
-            <p class="case-card__result">Выбрала направление дизайна и медиа, поступила на целевую программу.</p>
-            <span class="case-card__meta">4 сессии · 2 месяца</span>
-          </article>
-          <article class="case-card">
-            <h3>IT-специалист, 28 лет</h3>
-            <p class="case-card__result">Перешёл в продуктовую роль с ростом дохода на 40% за полгода.</p>
-            <span class="case-card__meta">Карьерный план · 6 месяцев</span>
-          </article>
-          <article class="case-card">
-            <h3>Родители + подросток</h3>
-            <p class="case-card__result">Согласовали ожидания, снизили тревогу перед ЕГЭ и выбором вуза.</p>
-            <span class="case-card__meta">Семейный формат · 5 встреч</span>
-          </article>
-        </div>
-      </div>
-    </section>
+    <!-- Кейсы: скрыто. Шаблон: ситуация, задача, формат, результат, период, оговорка об индивидуальности -->
+    <section class="section cases section--hidden" id="cases" aria-hidden="true" hidden></section>
 
-    <!-- Блог -->
-    <section class="section blog" id="blog" aria-labelledby="blog-title">
-      <div class="container">
-        <header class="section__header">
-          <span class="section__tag">Блог</span>
-          <h2 id="blog-title">Полезные материалы</h2>
-        </header>
-        <div class="blog__grid">
-          <article class="blog-card">
-            <time datetime="2026-05-10">10 мая 2026</time>
-            <h3><a href="#">Как говорить с подростком о будущем без давления</a></h3>
-            <p>Практические фразы и ошибки, которых стоит избегать родителям.</p>
-          </article>
-          <article class="blog-card">
-            <time datetime="2026-04-22">22 апреля 2026</time>
-            <h3><a href="#">5 признаков, что пора к карьерному консультанту</a></h3>
-            <p>Когда самостоятельный поиск перестаёт работать.</p>
-          </article>
-          <article class="blog-card">
-            <time datetime="2026-03-15">15 марта 2026</time>
-            <h3><a href="#">Профориентационные тесты: что они реально показывают</a></h3>
-            <p>Разбираем мифы и ограничения популярных методик.</p>
-          </article>
-        </div>
-      </div>
-    </section>
+    <!-- Блог: скрыто до готовых статей -->
+    <section class="section blog section--hidden" id="blog" aria-hidden="true" hidden></section>
 
-    <!-- FAQ -->
     <section class="section faq" id="faq" aria-labelledby="faq-title">
       <div class="container faq__inner">
         <header class="section__header">
@@ -277,45 +253,42 @@
           </details>
           <details class="faq__item">
             <summary>Консультации только онлайн?</summary>
-            <p>Нет — доступны онлайн-встречи и очные сессии (по договорённости в вашем городе).</p>
+            <p>Основной формат — онлайн по России. Другие форматы обсуждаются индивидуально.</p>
           </details>
           <details class="faq__item">
             <summary>Сколько встреч обычно нужно?</summary>
-            <p>От одной разовой консультации до программы из 5–8 встреч — зависит от запроса.</p>
+            <p>От одной встречи до программы из нескольких сессий — зависит от запроса.</p>
           </details>
           <details class="faq__item">
-            <summary>Можно ли прийти вместе с родителем/партнёром?</summary>
+            <summary>Можно ли прийти вместе с родителем?</summary>
             <p>Да, семейный формат возможен — обсудим это на этапе записи.</p>
           </details>
         </div>
       </div>
     </section>
 
-    <!-- Квиз -->
     <section class="section quiz" id="quiz" aria-labelledby="quiz-title">
       <div class="container quiz__inner">
         <header class="section__header section__header--center">
           <span class="section__tag">Квиз</span>
           <h2 id="quiz-title">Карта профессий за 5 минут</h2>
-          <p class="section__lead">Узнайте свой профессиональный профиль и получите ориентиры для следующего шага</p>
+          <p class="section__lead">Предварительный ориентир по интересам — не замена консультации специалиста</p>
         </header>
         <div id="quiz-panel" class="quiz__panel" aria-live="polite"></div>
       </div>
     </section>
 
-    <!-- Форма записи -->
     <section class="section booking" id="booking" aria-labelledby="booking-title">
       <div class="container booking__grid">
         <div class="booking__info">
           <span class="section__tag">Запись</span>
           <h2 id="booking-title">Готовы сделать первый шаг?</h2>
-          <p>Оставьте заявку — я свяжусь с вами в Telegram, WhatsApp или по email в течение 24 часов.</p>
-          <div class="booking__messengers">
-            <a href="https://t.me/" class="messenger-link" target="_blank" rel="noopener noreferrer">Telegram</a>
-            <a href="https://wa.me/" class="messenger-link" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-          </div>
+          <p>Оставьте заявку или свяжитесь удобным способом, когда контакты будут опубликованы.</p>
+          <div class="booking__messengers" data-contact-messengers></div>
         </div>
-        <form class="booking__form" action="#" method="post">
+        <form class="booking__form" data-booking-form method="post" novalidate>
+          <p class="form-setup-notice" data-form-setup-notice>Онлайн-форма пока настраивается. Используйте указанные способы связи.</p>
+          <div class="form-message" data-form-message hidden role="status"></div>
           <label class="hp" aria-hidden="true">
             <input type="text" name="website" tabindex="-1" autocomplete="off">
           </label>
@@ -324,12 +297,12 @@
             <input type="text" name="name" required autocomplete="name" placeholder="Как к вам обращаться">
           </label>
           <label>
-            <span>Телефон или мессенджер</span>
-            <input type="tel" name="phone" required autocomplete="tel" placeholder="+7 (___) ___-__-__">
+            <span>Телефон</span>
+            <input type="tel" name="phone" autocomplete="tel" placeholder="+7 (___) ___-__-__">
           </label>
           <label>
             <span>Email</span>
-            <input type="email" name="email" autocomplete="email" placeholder="email@example.com">
+            <input type="email" name="email" autocomplete="email" placeholder="ваш@email.ru">
           </label>
           <label>
             <span>Чем могу помочь?</span>
@@ -346,35 +319,35 @@
             <span>Комментарий</span>
             <textarea name="message" rows="3" placeholder="Кратко опишите ваш запрос"></textarea>
           </label>
+          <label class="form-consent">
+            <input type="checkbox" name="consent" value="yes">
+            <span>Согласен(на) на <a href="consent.html">обработку персональных данных</a> и ознакомлен(а) с <a href="privacy.html">политикой конфиденциальности</a>.</span>
+          </label>
           <button type="submit" class="btn btn--primary btn--full">Отправить заявку</button>
-          <p class="form-note">Нажимая кнопку, вы соглашаетесь на обработку персональных данных.</p>
         </form>
       </div>
     </section>
 
-    <!-- Контакты -->
     <section class="section contacts" id="contacts" aria-labelledby="contacts-title">
       <div class="container contacts__inner">
         <h2 id="contacts-title" class="visually-hidden">Контакты</h2>
-        <div class="contacts__item">
-          <span class="contacts__label">Email</span>
-          <a href="mailto:hello@example.com">hello@example.com</a>
-        </div>
-        <div class="contacts__item">
-          <span class="contacts__label">Соцсети</span>
-          <div class="contacts__social">
-            <a href="#" aria-label="Telegram">TG</a>
-            <a href="#" aria-label="ВКонтакте">VK</a>
-          </div>
-        </div>
-        <p class="contacts__copy">© 2026 Екатерина Карачунова. Профориентация и карьерное консультирование.</p>
+        <div data-contacts-list></div>
+        <p class="contacts__copy">© 2026 <span data-site-full-name>Екатерина Карачунова</span>. Профориентация и карьерное консультирование.</p>
+        <nav class="footer-legal" aria-label="Юридическая информация">
+          <a href="privacy.html">Политика обработки персональных данных</a>
+          <a href="consent.html">Согласие на обработку персональных данных</a>
+        </nav>
       </div>
     </section>
   </main>
 
   <a href="#top" class="back-top" aria-label="Наверх">↑</a>
 
-  <script src="quiz-data.js" defer></script>
-  <script src="quiz.js" defer></script>
+  <script src="js/site-config.js" defer></script>
+  <script src="js/analytics.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/form.js" defer></script>
+  <script src="js/quiz-data.js" defer></script>
+  <script src="js/quiz.js" defer></script>
 </body>
 </html>

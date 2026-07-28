@@ -1,0 +1,17 @@
+/* Дополнительные медиазапросы — основные в css/main.css */
+
+@media (max-width: 320px) {
+  .logo {
+    font-size: 1.15rem;
+  }
+
+  .hero__subtitle {
+    font-size: var(--text-sm);
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    width: min(1200px, 92vw);
+  }
+}

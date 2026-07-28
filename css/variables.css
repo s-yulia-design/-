@@ -1,0 +1,39 @@
+/* Design tokens — светлее фон, выше контраст, крупнее базовый текст */
+:root {
+  --color-bg: #d4c8cc;
+  --color-bg-alt: #c8bcc0;
+  --color-surface: #faf8f9;
+  --color-navy: #1a2b4a;
+  --color-navy-soft: #2d4268;
+  --color-accent: #2f5f7f;
+  --color-accent-light: #6a96b8;
+  --color-pastel: #e2d8dc;
+  --color-beige: #bdb0b4;
+  --color-text: #1f1f1f;
+  --color-text-muted: #4a4a4a;
+  --color-border: rgba(26, 43, 74, 0.14);
+
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-body: "Outfit", system-ui, sans-serif;
+
+  --text-base: 1.1875rem;
+  --text-sm: 1.0625rem;
+  --text-xs: 0.9375rem;
+
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+  --space-2xl: 6rem;
+
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+
+  --shadow-soft: 0 4px 24px rgba(26, 43, 74, 0.08);
+  --shadow-card: 0 12px 40px rgba(26, 43, 74, 0.1);
+
+  --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  --header-h: 72px;
+}

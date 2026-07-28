@@ -44,22 +44,71 @@
 
     const maxScore = sorted[0].score;
     if (maxScore === 0) {
-      return [sorted[0].id];
+      return { ids: [sorted[0].id], mixed: false };
     }
 
-    return sorted.filter(function (item) {
+    const tied = sorted.filter(function (item) {
       return item.score === maxScore;
-    }).map(function (item) {
-      return item.id;
     });
+
+    if (tied.length > 2) {
+      return { ids: [], mixed: true };
+    }
+
+    return { ids: tied.map(function (item) {
+      return item.id;
+    }), mixed: false };
   }
 
-  function getProfileTitle(profileIds) {
-    return profileIds
+  function getProfileTitle(result) {
+    if (result.mixed) {
+      return "Смешанный профиль интересов";
+    }
+    return result.ids
+      .slice(0, 2)
       .map(function (id) {
         return QUIZ_DATA.profiles[id].title;
       })
       .join(" + ");
+  }
+
+  function getResultProfile(result) {
+    if (result.mixed) {
+      return {
+        tagline:
+          "У вас равномерно выражены разные типы интересов. Это повод исследовать несколько направлений и проверить их на консультации.",
+        spheres: ["Несколько сфер для сравнения", "Образование и развитие", "Работа с людьми", "Аналитика и проекты"],
+        strengths: [
+          "Гибкость и широта интересов",
+          "Способность видеть задачу с разных сторон",
+          "Потребность в осознанном выборе без спешки",
+        ],
+        checklist: [
+          "Какие 2–3 направления стоит проверить в первую очередь",
+          "Какие навыки уже есть и что нужно развить",
+          "Какой формат работы вам комфортнее на практике",
+        ],
+        ctaText:
+          "На консультации сузим круг направлений и составим план проверки гипотез — без ярлыков и давления.",
+      };
+    }
+    return QUIZ_DATA.profiles[result.ids[0]];
+  }
+
+  function buildResultCopyText(title) {
+    return (
+      "Квиз «Карта профессий» — предварительный ориентир.\n" +
+      "Профиль: " +
+      title +
+      "\n\n" +
+      QUIZ_DATA.disclaimer
+    );
+  }
+
+  function trackQuiz(eventName) {
+    if (window.siteAnalytics) {
+      window.siteAnalytics.track(eventName);
+    }
   }
 
   function clearElement(el) {
@@ -92,6 +141,7 @@
       state.step = 0;
       state.answers = [];
       state.selectedOption = null;
+      trackQuiz("quiz_start");
       render();
     });
 
@@ -213,22 +263,23 @@
 
   function renderResult() {
     const scores = calculateScores();
-    const topIds = getTopProfiles(scores);
-    const primaryId = topIds[0];
-    const profile = QUIZ_DATA.profiles[primaryId];
-    const combinedTitle = getProfileTitle(topIds);
+    const topResult = getTopProfiles(scores);
+    const profile = getResultProfile(topResult);
+    const combinedTitle = getProfileTitle(topResult);
+
+    trackQuiz("quiz_complete");
 
     clearElement(panel);
 
     const card = createEl("div", "quiz__card card quiz__card--result");
     card.setAttribute("aria-live", "polite");
 
-    const badge = createEl("span", "quiz__result-badge", "Ваш профиль");
+    const badge = createEl("span", "quiz__result-badge", "Предполагаемый профиль интересов");
     const title = createEl("h3", "quiz__result-title", combinedTitle);
     const tagline = createEl("p", "quiz__result-tagline", profile.tagline);
 
     const spheresBlock = createEl("div", "quiz__result-block");
-    const spheresHeading = createEl("h4", "quiz__result-heading", "Подходящие сферы");
+    const spheresHeading = createEl("h4", "quiz__result-heading", "Направления для дальнейшей проверки");
     const spheresWrap = createEl("div", "quiz__spheres");
 
     profile.spheres.forEach(function (sphere) {
@@ -237,22 +288,33 @@
 
     spheresBlock.append(spheresHeading, spheresWrap);
 
-    const strengthsBlock = renderList("Сильные стороны", profile.strengths);
+    const strengthsBlock = renderList("Возможные сильные стороны", profile.strengths);
     const checklistBlock = renderList("Что важно проверить", profile.checklist);
 
     const ctaText = createEl("p", "quiz__cta-text", profile.ctaText);
     const disclaimer = createEl("p", "quiz__disclaimer", QUIZ_DATA.disclaimer);
 
     const actions = createEl("div", "quiz__actions quiz__actions--result");
-    const consultBtn = createEl("a", "btn btn--primary", "Разобрать результат на консультации");
+    const consultBtn = createEl("a", "btn btn--primary", "Обсудить результат");
     consultBtn.href = "#booking";
     consultBtn.addEventListener("click", function () {
+      trackQuiz("quiz_consultation_click");
       prefillBookingForm(combinedTitle);
+    });
+
+    const copyBtn = createEl("button", "btn btn--ghost", "Скопировать результат");
+    copyBtn.type = "button";
+    copyBtn.addEventListener("click", function () {
+      var text = buildResultCopyText(combinedTitle);
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text);
+      }
     });
 
     const retryBtn = createEl("button", "btn btn--ghost", "Пройти заново");
     retryBtn.type = "button";
     retryBtn.addEventListener("click", function () {
+      trackQuiz("quiz_restart");
       state.step = "intro";
       state.answers = [];
       state.selectedOption = null;
@@ -260,7 +322,7 @@
       root.scrollIntoView({ behavior: "smooth", block: "start" });
     });
 
-    actions.append(consultBtn, retryBtn);
+    actions.append(consultBtn, copyBtn, retryBtn);
     card.append(
       badge,
       title,
@@ -293,7 +355,7 @@
 
     if (messageField) {
       const note =
-        "Прошёл(ла) квиз «Карта профессий». Профиль: " + profileTitle + ".";
+        "Прошёл(ла) квиз «Карта профессий». Предварительный профиль: " + profileTitle + ".";
       const existing = messageField.value.trim();
       messageField.value = existing ? existing + "\n\n" + note : note;
     }

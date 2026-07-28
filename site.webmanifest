@@ -1,0 +1,16 @@
+{
+  "name": "Екатерина Карачунова — профориентация",
+  "short_name": "EK UProf",
+  "lang": "ru",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#d4c8cc",
+  "theme_color": "#1a2b4a",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
