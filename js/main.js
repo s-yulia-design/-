@@ -176,6 +176,19 @@
         if (window.siteAnalytics && ev) window.siteAnalytics.track(ev);
       });
     });
+
+    document.querySelectorAll("[data-booking-service]").forEach(function (el) {
+      el.addEventListener("click", function () {
+        var serviceName = el.getAttribute("data-booking-service");
+        var select = document.querySelector('.booking__form select[name="service"]');
+        if (!select || !serviceName) return;
+        Array.from(select.options).forEach(function (opt) {
+          if (opt.textContent === serviceName) {
+            select.value = opt.value;
+          }
+        });
+      });
+    });
   }
 
   function applyCanonicalAndOg() {
@@ -197,6 +210,13 @@
     initNav();
     renderContacts();
     applyCanonicalAndOg();
+
+    if (!window.location.hash) {
+      if ("scrollRestoration" in history) {
+        history.scrollRestoration = "manual";
+      }
+      window.scrollTo(0, 0);
+    }
   }
 
   if (document.readyState === "loading") {

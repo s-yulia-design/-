@@ -147,7 +147,15 @@
 
     card.append(title, lead, meta, btn);
     panel.appendChild(card);
-    btn.focus();
+  }
+
+  function focusWithoutScroll(el) {
+    if (!el || typeof el.focus !== "function") return;
+    try {
+      el.focus({ preventScroll: true });
+    } catch (err) {
+      el.focus();
+    }
   }
 
   function renderQuestion() {
@@ -245,7 +253,7 @@
     panel.appendChild(card);
 
     questionEl.setAttribute("tabindex", "-1");
-    questionEl.focus();
+    focusWithoutScroll(questionEl);
   }
 
   function renderList(titleText, items) {
@@ -336,7 +344,7 @@
     );
     panel.appendChild(card);
     title.setAttribute("tabindex", "-1");
-    title.focus();
+    focusWithoutScroll(title);
   }
 
   function prefillBookingForm(profileTitle) {
@@ -399,7 +407,7 @@
       render();
       const freshOptions = panel.querySelectorAll(".quiz__option");
       if (freshOptions[next]) {
-        freshOptions[next].focus();
+        focusWithoutScroll(freshOptions[next]);
       }
     }
   }

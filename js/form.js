@@ -58,7 +58,6 @@
 
   function initForm() {
     var form = document.querySelector("[data-booking-form]");
-    var bookingSection = document.querySelector("#booking");
     if (!form || typeof SITE_CONFIG === "undefined") return;
 
     var submitBtn = form.querySelector('[type="submit"]');
@@ -71,7 +70,8 @@
     var hasContacts = hasPublicContacts(SITE_CONFIG);
 
     if (!endpoint && !hasContacts) {
-      if (bookingSection) bookingSection.hidden = true;
+      if (notice) notice.hidden = false;
+      if (submitBtn) submitBtn.disabled = true;
       return;
     }
 

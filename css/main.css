@@ -1,4 +1,4 @@
-/* Профориентация — Екатерина Карачунова (основные стили) */
+﻿/* Профориентация — Екатерина Карачунова (основные стили) */
 
 *,
 *::before,
@@ -111,7 +111,7 @@ ul {
 
 .logo {
   font-family: var(--font-display);
-  font-size: 1.5rem;
+  font-size: calc(1.5rem + var(--font-bump));
   font-weight: 600;
   color: var(--color-navy);
   letter-spacing: -0.02em;
@@ -128,7 +128,7 @@ ul {
 }
 
 .nav a {
-  font-size: 0.9rem;
+  font-size: calc(0.9rem + var(--font-bump));
   font-weight: 500;
   color: var(--color-text-muted);
 }
@@ -174,7 +174,7 @@ ul {
   justify-content: center;
   padding: 0.9rem 1.75rem;
   font-family: var(--font-body);
-  font-size: 0.95rem;
+  font-size: calc(0.95rem + var(--font-bump));
   font-weight: 500;
   border-radius: 100px;
   border: none;
@@ -207,7 +207,7 @@ ul {
 
 .btn--sm {
   padding: 0.65rem 1.25rem;
-  font-size: 0.875rem;
+  font-size: calc(0.875rem + var(--font-bump));
 }
 
 .btn--full {
@@ -231,7 +231,7 @@ ul {
 }
 
 .hero__label {
-  font-size: 0.8rem;
+  font-size: calc(0.8rem + var(--font-bump));
   font-weight: 500;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -242,7 +242,7 @@ ul {
 
 .hero h1 {
   font-family: var(--font-display);
-  font-size: clamp(2.25rem, 4.5vw, 3.5rem);
+  font-size: clamp(calc(2.25rem + var(--font-bump)), 4.5vw, calc(3.5rem + var(--font-bump)));
   font-weight: 600;
   line-height: 1.15;
   color: var(--color-navy);
@@ -251,7 +251,7 @@ ul {
 }
 
 .hero__subtitle {
-  font-size: 1.05rem;
+  font-size: calc(1.05rem + var(--font-bump));
   color: var(--color-text-muted);
   max-width: 32rem;
   margin-bottom: var(--space-lg);
@@ -281,14 +281,14 @@ ul {
 
 .hero__stats strong {
   font-family: var(--font-display);
-  font-size: 1.75rem;
+  font-size: calc(1.75rem + var(--font-bump));
   font-weight: 600;
   color: var(--color-navy);
   line-height: 1.2;
 }
 
 .hero__stats span {
-  font-size: 0.8rem;
+  font-size: calc(0.8rem + var(--font-bump));
   color: var(--color-text-muted);
 }
 
@@ -336,7 +336,7 @@ ul {
   padding: var(--space-sm) var(--space-md);
   background: var(--color-surface);
   border-radius: var(--radius-md);
-  font-size: 0.85rem;
+  font-size: calc(0.85rem + var(--font-bump));
   font-weight: 500;
   color: var(--color-navy);
   box-shadow: var(--shadow-soft);
@@ -359,7 +359,7 @@ ul {
 
 .section__tag {
   display: inline-block;
-  font-size: 0.75rem;
+  font-size: calc(0.75rem + var(--font-bump));
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -369,7 +369,7 @@ ul {
 
 .section h2 {
   font-family: var(--font-display);
-  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-size: clamp(calc(1.75rem + var(--font-bump)), 3vw, calc(2.5rem + var(--font-bump)));
   font-weight: 600;
   color: var(--color-navy);
   line-height: 1.2;
@@ -377,7 +377,7 @@ ul {
 }
 
 .section__lead {
-  font-size: 1.05rem;
+  font-size: calc(1.05rem + var(--font-bump));
   color: var(--color-text-muted);
 }
 
@@ -407,14 +407,14 @@ ul {
 
 .card h3 {
   font-family: var(--font-display);
-  font-size: 1.35rem;
+  font-size: calc(1.35rem + var(--font-bump));
   color: var(--color-navy);
   margin-bottom: var(--space-xs);
 }
 
 .card p,
 .card li {
-  font-size: 0.95rem;
+  font-size: calc(0.95rem + var(--font-bump));
   color: var(--color-text-muted);
 }
 
@@ -477,7 +477,7 @@ ul {
 
 .service-card__num {
   font-family: var(--font-display);
-  font-size: 2rem;
+  font-size: calc(2rem + var(--font-bump));
   font-weight: 600;
   color: var(--color-pastel);
   line-height: 1;
@@ -487,19 +487,19 @@ ul {
 
 .service-card h3 {
   font-family: var(--font-display);
-  font-size: 1.35rem;
+  font-size: calc(1.35rem + var(--font-bump));
   color: var(--color-navy);
   margin-bottom: var(--space-xs);
 }
 
 .service-card p {
-  font-size: 0.9rem;
+  font-size: calc(0.9rem + var(--font-bump));
   color: var(--color-text-muted);
   margin-bottom: var(--space-md);
 }
 
 .service-card__link {
-  font-size: 0.9rem;
+  font-size: calc(0.9rem + var(--font-bump));
   font-weight: 500;
 }
 
@@ -522,6 +522,18 @@ ul {
 
 .service-card--wide .service-card__num {
   color: rgba(255, 255, 255, 0.35);
+}
+
+.btn--on-dark {
+  background: #fff;
+  color: var(--color-navy);
+  box-shadow: var(--shadow-soft);
+}
+
+.btn--on-dark:hover {
+  background: var(--color-surface);
+  color: var(--color-navy);
+  transform: translateY(-2px);
 }
 
 .service-card--wide > div {
@@ -553,7 +565,7 @@ ul {
   height: 40px;
   margin-bottom: var(--space-sm);
   font-family: var(--font-display);
-  font-size: 1.25rem;
+  font-size: calc(1.25rem + var(--font-bump));
   font-weight: 600;
   color: var(--color-navy);
   background: var(--color-pastel);
@@ -562,13 +574,13 @@ ul {
 
 .process__steps h3 {
   font-family: var(--font-display);
-  font-size: 1.15rem;
+  font-size: calc(1.15rem + var(--font-bump));
   color: var(--color-navy);
   margin-bottom: var(--space-xs);
 }
 
 .process__steps p {
-  font-size: 0.9rem;
+  font-size: calc(0.9rem + var(--font-bump));
   color: var(--color-text-muted);
 }
 
@@ -592,7 +604,7 @@ ul {
 
 .review p {
   font-family: var(--font-display);
-  font-size: 1.15rem;
+  font-size: calc(1.15rem + var(--font-bump));
   font-style: italic;
   color: var(--color-navy);
   margin-bottom: var(--space-md);
@@ -600,7 +612,7 @@ ul {
 }
 
 .review footer {
-  font-size: 0.85rem;
+  font-size: calc(0.85rem + var(--font-bump));
   color: var(--color-text-muted);
 }
 
@@ -620,19 +632,19 @@ ul {
 
 .case-card h3 {
   font-family: var(--font-display);
-  font-size: 1.2rem;
+  font-size: calc(1.2rem + var(--font-bump));
   color: var(--color-navy);
   margin-bottom: var(--space-sm);
 }
 
 .case-card__result {
-  font-size: 0.95rem;
+  font-size: calc(0.95rem + var(--font-bump));
   color: var(--color-text-muted);
   margin-bottom: var(--space-md);
 }
 
 .case-card__meta {
-  font-size: 0.8rem;
+  font-size: calc(0.8rem + var(--font-bump));
   font-weight: 500;
   color: var(--color-accent);
 }
@@ -661,13 +673,13 @@ ul {
 }
 
 .blog-card time {
-  font-size: 0.8rem;
+  font-size: calc(0.8rem + var(--font-bump));
   color: var(--color-accent);
 }
 
 .blog-card h3 {
   font-family: var(--font-display);
-  font-size: 1.2rem;
+  font-size: calc(1.2rem + var(--font-bump));
   margin: var(--space-xs) 0;
   line-height: 1.3;
 }
@@ -681,7 +693,7 @@ ul {
 }
 
 .blog-card p {
-  font-size: 0.9rem;
+  font-size: calc(0.9rem + var(--font-bump));
   color: var(--color-text-muted);
 }
 
@@ -700,7 +712,7 @@ ul {
 
 .faq__item summary {
   font-family: var(--font-display);
-  font-size: 1.15rem;
+  font-size: calc(1.15rem + var(--font-bump));
   font-weight: 600;
   color: var(--color-navy);
   cursor: pointer;
@@ -718,7 +730,7 @@ ul {
 .faq__item summary::after {
   content: "+";
   font-family: var(--font-body);
-  font-size: 1.25rem;
+  font-size: calc(1.25rem + var(--font-bump));
   color: var(--color-accent);
   transition: transform var(--transition);
 }
@@ -729,7 +741,7 @@ ul {
 
 .faq__item p {
   margin-top: var(--space-sm);
-  font-size: 0.95rem;
+  font-size: calc(0.95rem + var(--font-bump));
   color: var(--color-text-muted);
   padding-right: var(--space-lg);
 }
@@ -771,7 +783,7 @@ ul {
   background: rgba(255, 255, 255, 0.12);
   color: #fff !important;
   border-radius: 100px;
-  font-size: 0.9rem;
+  font-size: calc(0.9rem + var(--font-bump));
   font-weight: 500;
 }
 
@@ -792,7 +804,7 @@ ul {
 
 .booking__form label span {
   display: block;
-  font-size: 0.85rem;
+  font-size: calc(0.85rem + var(--font-bump));
   font-weight: 500;
   color: var(--color-navy);
   margin-bottom: 0.35rem;
@@ -804,7 +816,7 @@ ul {
   width: 100%;
   padding: 0.75rem 1rem;
   font-family: var(--font-body);
-  font-size: 1rem;
+  font-size: calc(1rem + var(--font-bump));
   border: 1px solid var(--color-border);
   border-radius: var(--radius-sm);
   background: var(--color-bg);
@@ -828,7 +840,7 @@ ul {
 }
 
 .form-note {
-  font-size: 0.75rem;
+  font-size: calc(0.75rem + var(--font-bump));
   color: var(--color-text-muted);
   text-align: center;
 }
@@ -849,7 +861,7 @@ ul {
 
 .contacts__label {
   display: block;
-  font-size: 0.75rem;
+  font-size: calc(0.75rem + var(--font-bump));
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--color-text-muted);
@@ -869,7 +881,7 @@ ul {
   justify-content: center;
   background: var(--color-bg-alt);
   border-radius: 50%;
-  font-size: 0.75rem;
+  font-size: calc(0.75rem + var(--font-bump));
   font-weight: 600;
   color: var(--color-navy);
 }
@@ -877,7 +889,7 @@ ul {
 .contacts__copy {
   width: 100%;
   text-align: center;
-  font-size: 0.8rem;
+  font-size: calc(0.8rem + var(--font-bump));
   color: var(--color-text-muted);
   margin-top: var(--space-sm);
 }
@@ -895,7 +907,7 @@ ul {
   background: var(--color-navy);
   color: #fff;
   border-radius: 50%;
-  font-size: 1.1rem;
+  font-size: calc(1.1rem + var(--font-bump));
   box-shadow: var(--shadow-soft);
   opacity: 0.9;
   z-index: 100;
@@ -933,7 +945,7 @@ ul {
 
 .quiz__title {
   font-family: var(--font-display);
-  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-size: clamp(calc(1.5rem + var(--font-bump)), 3vw, calc(2rem + var(--font-bump)));
   font-weight: 600;
   color: var(--color-navy);
   margin-bottom: var(--space-sm);
@@ -945,7 +957,7 @@ ul {
 }
 
 .quiz__meta {
-  font-size: 0.9rem;
+  font-size: calc(0.9rem + var(--font-bump));
   font-weight: 500;
   color: var(--color-accent);
   margin-bottom: var(--space-lg);
@@ -956,7 +968,7 @@ ul {
 }
 
 .quiz__progress-label {
-  font-size: 0.85rem;
+  font-size: calc(0.85rem + var(--font-bump));
   font-weight: 500;
   color: var(--color-text-muted);
   margin-bottom: var(--space-xs);
@@ -978,7 +990,7 @@ ul {
 
 .quiz__question {
   font-family: var(--font-display);
-  font-size: clamp(1.25rem, 2.5vw, 1.6rem);
+  font-size: clamp(calc(1.25rem + var(--font-bump)), 2.5vw, calc(1.6rem + var(--font-bump)));
   font-weight: 600;
   color: var(--color-navy);
   margin-bottom: var(--space-md);
@@ -997,7 +1009,7 @@ ul {
   padding: var(--space-md);
   text-align: left;
   font-family: var(--font-body);
-  font-size: 0.95rem;
+  font-size: calc(0.95rem + var(--font-bump));
   line-height: 1.5;
   color: var(--color-text);
   background: var(--color-surface);
@@ -1041,7 +1053,7 @@ ul {
 
 .quiz__result-badge {
   display: inline-block;
-  font-size: 0.75rem;
+  font-size: calc(0.75rem + var(--font-bump));
   font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -1051,14 +1063,14 @@ ul {
 
 .quiz__result-title {
   font-family: var(--font-display);
-  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  font-size: clamp(calc(1.75rem + var(--font-bump)), 4vw, calc(2.25rem + var(--font-bump)));
   font-weight: 700;
   color: var(--color-navy);
   margin-bottom: var(--space-xs);
 }
 
 .quiz__result-tagline {
-  font-size: 1.05rem;
+  font-size: calc(1.05rem + var(--font-bump));
   color: var(--color-text-muted);
   margin-bottom: var(--space-lg);
 }
@@ -1069,7 +1081,7 @@ ul {
 
 .quiz__result-heading {
   font-family: var(--font-display);
-  font-size: 1.15rem;
+  font-size: calc(1.15rem + var(--font-bump));
   font-weight: 600;
   color: var(--color-navy);
   margin-bottom: var(--space-sm);
@@ -1086,7 +1098,7 @@ ul {
   position: relative;
   padding-left: 1.25rem;
   color: var(--color-text);
-  font-size: 0.95rem;
+  font-size: calc(0.95rem + var(--font-bump));
 }
 
 .quiz__result-list li::before {
@@ -1109,7 +1121,7 @@ ul {
 .quiz__sphere {
   display: inline-block;
   padding: 0.35rem 0.85rem;
-  font-size: 0.85rem;
+  font-size: calc(0.85rem + var(--font-bump));
   font-weight: 500;
   color: var(--color-navy);
   background: var(--color-surface);
@@ -1124,7 +1136,7 @@ ul {
   border-left: 3px solid var(--color-accent);
   border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
   color: var(--color-navy-soft);
-  font-size: 0.95rem;
+  font-size: calc(0.95rem + var(--font-bump));
 }
 
 .quiz__disclaimer {
@@ -1164,7 +1176,7 @@ ul {
 }
 
 .hero__stats li strong {
-  font-size: 1.35rem;
+  font-size: calc(1.35rem + var(--font-bump));
 }
 
 .hero__photo-placeholder {
