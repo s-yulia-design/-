@@ -124,7 +124,7 @@
         phoneWrap.className = "contacts__item";
         phoneWrap.innerHTML =
           '<span class="contacts__label">Телефон</span><a href="tel:' +
-          cfg.phone.replace(/\s/g, "") +
+          cfg.phone.replace(/[^\d+]/g, "") +
           '" data-track="phone">' +
           cfg.phone +
           "</a>";
