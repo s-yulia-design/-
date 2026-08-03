@@ -307,11 +307,14 @@ ul {
   box-shadow: var(--shadow-card);
   background: var(--color-surface);
   line-height: 0;
+  aspect-ratio: 3 / 4;
 }
 
 .hero__frame img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
   display: block;
 }
 
@@ -1357,6 +1360,24 @@ ul {
   font-size: calc(1.05rem + var(--font-bump));
   color: var(--color-text);
   line-height: 1.6;
+}
+
+.article-figure {
+  margin: var(--space-xl) 0;
+}
+
+.article-figure img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+}
+
+.article-figure figcaption {
+  margin-top: var(--space-sm);
+  font-size: calc(0.9rem + var(--font-bump));
+  color: var(--color-text-muted);
+  line-height: 1.5;
 }
 
 .article-content blockquote {
