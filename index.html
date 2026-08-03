@@ -63,6 +63,7 @@
         <a href="#services">Услуги</a>
         <a href="#process">Как работаем</a>
         <a href="#quiz">Квиз</a>
+        <a href="articles.html">Блог</a>
         <a href="#faq">FAQ</a>
         <a href="#booking" class="nav__cta" data-analytics-cta="primary_cta_click">Записаться</a>
       </nav>
@@ -237,8 +238,23 @@
     <!-- Кейсы: скрыто. Шаблон: ситуация, задача, формат, результат, период, оговорка об индивидуальности -->
     <section class="section cases section--hidden" id="cases" aria-hidden="true" hidden></section>
 
-    <!-- Блог: скрыто до готовых статей -->
-    <section class="section blog section--hidden" id="blog" aria-hidden="true" hidden></section>
+    <section class="section blog" id="blog" aria-labelledby="blog-title">
+      <div class="container">
+        <header class="section__header">
+          <span class="section__tag">Блог</span>
+          <h2 id="blog-title">Полезные материалы</h2>
+        </header>
+        <div class="blog__grid">
+          <article class="blog-card">
+            <span class="blog-card__category">Подростки и родители</span>
+            <time datetime="2026-08-03">3 августа 2026</time>
+            <h3><a href="articles/kak-pomoch-podrostku-vybrat-professiyu.html">Как помочь подростку выбрать профессию после 9 или 11 класса</a></h3>
+            <p>Понятный алгоритм для родителей: как обсуждать с подростком будущую профессию без давления и конфликтов.</p>
+          </article>
+        </div>
+        <p class="blog__more"><a href="articles.html">Все статьи →</a></p>
+      </div>
+    </section>
 
     <section class="section faq" id="faq" aria-labelledby="faq-title">
       <div class="container faq__inner">
