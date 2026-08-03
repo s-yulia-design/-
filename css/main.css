@@ -313,6 +313,7 @@ ul {
 .hero__frame img {
   width: 100%;
   height: 100%;
+  min-height: 320px;
   object-fit: cover;
   object-position: center top;
   display: block;
@@ -1441,6 +1442,20 @@ ul {
 
 .article-footer p + p {
   margin-top: var(--space-xs);
+}
+
+.blog-card__thumb {
+  display: block;
+  margin: var(--space-sm) 0;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.blog-card__thumb img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
 }
 
 .blog-card__title {

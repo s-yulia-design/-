@@ -15,5 +15,5 @@ const SITE_CONFIG = {
   formEndpoint: "",
   yandexMetrikaId: "",
   contactResponseTime: "",
-  expertPhotoPath: "images/expert/photo.webp",
+  expertPhotoPath: "images/expert/photo.jpg",
 };
