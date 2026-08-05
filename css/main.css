@@ -1363,6 +1363,18 @@ ul {
   line-height: 1.6;
 }
 
+.article-author {
+  margin-top: var(--space-sm);
+  font-size: calc(0.95rem + var(--font-bump));
+  color: var(--color-text-muted);
+}
+
+.blog-card__meta {
+  margin: var(--space-xs) 0 var(--space-sm);
+  font-size: calc(0.85rem + var(--font-bump));
+  color: var(--color-text-muted);
+}
+
 .article-figure {
   margin: var(--space-xl) 0;
 }

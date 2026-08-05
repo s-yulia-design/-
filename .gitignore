@@ -1,0 +1,21 @@
+# Article source drafts — not for GitHub Pages
+articles/*.md
+articles/*.txt
+content/articles/*.md
+content/articles/*.txt
+article_1_for_cursor.md
+article_1_for_cursor.txt
+*.zip
+
+# Unused local media / drafts
+IMG_3401.jpeg
+proforientolog_hero_cursor_ready.jpg
+ChatGPT*.png
+images/articles/podrostok-ne-znaet-kem-stat.jpg
+
+# Local / tooling
+.env
+.cursor/
+*.log
+*.bak
+*.tmp
