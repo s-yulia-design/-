@@ -91,8 +91,8 @@
             <img
               src="images/expert/photo.jpg"
               alt="Екатерина Карачунова — профориентолог и карьерный консультант"
-              width="480"
-              height="640"
+              width="718"
+              height="1024"
               fetchpriority="high"
             >
           </div>
@@ -254,7 +254,7 @@
             <span class="blog-card__category">Подростки и родители</span>
             <time datetime="2026-08-03">3 августа 2026</time>
             <a class="blog-card__thumb" href="articles/kak-pomoch-podrostku-vybrat-professiyu.html">
-              <img src="images/articles/podrostok-vybor-professii.jpg" alt="" width="640" height="400" loading="lazy">
+              <img src="images/articles/podrostok-vybor-professii.jpg" alt="" width="1024" height="576" loading="lazy">
             </a>
             <h3><a href="articles/kak-pomoch-podrostku-vybrat-professiyu.html">Как помочь подростку выбрать профессию после 9 или 11 класса</a></h3>
             <p>Понятный алгоритм для родителей: как обсуждать с подростком будущую профессию без давления и конфликтов.</p>
@@ -263,7 +263,7 @@
             <span class="blog-card__category">Подростки и родители</span>
             <time datetime="2026-08-05">5 августа 2026</time>
             <a class="blog-card__thumb" href="articles/podrostok-ne-znaet-kem-stat.html">
-              <img src="images/articles/podrostok-ne-znaet-kem-stat.webp" alt="" width="640" height="360" loading="lazy">
+              <img src="images/articles/podrostok-ne-znaet-kem-stat.webp" alt="" width="1024" height="576" loading="lazy">
             </a>
             <h3><a href="articles/podrostok-ne-znaet-kem-stat.html">Что делать, если подросток не знает, кем хочет стать</a></h3>
             <p>Почему подросток отвечает «не знаю» и как помочь ему разобраться без давления и конфликтов.</p>
@@ -272,7 +272,7 @@
             <span class="blog-card__category">Карьера взрослых</span>
             <time datetime="2026-08-05">5 августа 2026</time>
             <a class="blog-card__thumb" href="articles/kakaya-professiya-mne-podhodit.html">
-              <img src="images/articles/kakaya-professiya-mne-podhodit.jpg" alt="" width="640" height="400" loading="lazy">
+              <img src="images/articles/kakaya-professiya-mne-podhodit.jpg" alt="" width="1024" height="576" loading="lazy">
             </a>
             <h3><a href="articles/kakaya-professiya-mne-podhodit.html">Какая профессия мне подходит: как найти подходящее направление</a></h3>
             <p>Понятный алгоритм для взрослых: как проанализировать текущую ситуацию, увидеть сильные стороны и определить подходящее направление.</p>
@@ -324,49 +324,27 @@
       <div class="container booking__grid">
         <div class="booking__info">
           <span class="section__tag">Запись</span>
-          <h2 id="booking-title">Готовы сделать первый шаг?</h2>
-          <p>Оставьте заявку или свяжитесь по телефону и email — отвечу удобным способом.</p>
-          <div class="booking__messengers" data-contact-messengers></div>
+          <h2 id="booking-title">Записаться на консультацию</h2>
+          <p>Свяжитесь с Екатериной удобным способом</p>
         </div>
-        <form class="booking__form" data-booking-form method="post" novalidate>
-          <p class="form-setup-notice" data-form-setup-notice>Онлайн-форма пока настраивается. Используйте указанные способы связи.</p>
-          <div class="form-message" data-form-message hidden role="status"></div>
-          <label class="hp" aria-hidden="true">
-            <input type="text" name="website" tabindex="-1" autocomplete="off">
-          </label>
-          <label>
-            <span>Ваше имя</span>
-            <input type="text" name="name" required autocomplete="name" placeholder="Как к вам обращаться">
-          </label>
-          <label>
-            <span>Телефон</span>
-            <input type="tel" name="phone" autocomplete="tel" placeholder="+7 (___) ___-__-__">
-          </label>
-          <label>
-            <span>Email</span>
-            <input type="email" name="email" autocomplete="email" placeholder="ваш@email.ru">
-          </label>
-          <label>
-            <span>Чем могу помочь?</span>
-            <select name="service">
-              <option value="">Выберите услугу</option>
-              <option>Карьерная консультация</option>
-              <option>Профориентация подростков</option>
-              <option>Разбор сильных сторон</option>
-              <option>Выбор профессии</option>
-              <option>Карьерный план</option>
-            </select>
-          </label>
-          <label>
-            <span>Комментарий</span>
-            <textarea name="message" rows="3" placeholder="Кратко опишите ваш запрос"></textarea>
-          </label>
-          <label class="form-consent">
-            <input type="checkbox" name="consent" value="yes">
-            <span>Согласен(на) на <a href="consent.html">обработку персональных данных</a> и ознакомлен(а) с <a href="privacy.html">политикой конфиденциальности</a>.</span>
-          </label>
-          <button type="submit" class="btn btn--primary btn--full">Отправить заявку</button>
-        </form>
+        <div class="booking__channels" role="list">
+          <div class="booking__channel" role="listitem">
+            <span class="booking__channel-label">Телефон</span>
+            <a class="booking__channel-value" href="tel:+79023848349">+7-902-384-83-49</a>
+            <a class="btn btn--primary btn--sm" href="tel:+79023848349">Позвонить</a>
+          </div>
+          <div class="booking__channel" role="listitem">
+            <span class="booking__channel-label">Email</span>
+            <a class="booking__channel-value" href="mailto:katcara@yandex.ru">katcara@yandex.ru</a>
+            <a class="btn btn--primary btn--sm" href="mailto:katcara@yandex.ru">Написать на email</a>
+          </div>
+          <div class="booking__channel" role="listitem">
+            <span class="booking__channel-label">Telegram</span>
+            <a class="booking__channel-value" href="https://t.me/ek_uprof" target="_blank" rel="noopener noreferrer">@ek_uprof</a>
+            <a class="btn btn--primary btn--sm" href="https://t.me/ek_uprof" target="_blank" rel="noopener noreferrer">Перейти в Telegram</a>
+          </div>
+        </div>
+        <p class="booking__note">Сайт не принимает и не сохраняет контактные данные через онлайн-форму.</p>
       </div>
     </section>
 
@@ -389,7 +367,6 @@
   <script src="js/site-config.js" defer></script>
   <script src="js/analytics.js" defer></script>
   <script src="js/main.js" defer></script>
-  <script src="js/form.js" defer></script>
   <script src="js/quiz-data.js" defer></script>
   <script src="js/quiz.js" defer></script>
 </body>

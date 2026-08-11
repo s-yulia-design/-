@@ -347,26 +347,9 @@
     focusWithoutScroll(title);
   }
 
-  function prefillBookingForm(profileTitle) {
-    const serviceSelect = document.querySelector('.booking__form select[name="service"]');
-    const messageField = document.querySelector('.booking__form textarea[name="message"]');
-
-    if (serviceSelect) {
-      const options = Array.from(serviceSelect.options);
-      const target = options.find(function (opt) {
-        return opt.textContent === "Разбор сильных сторон";
-      });
-      if (target) {
-        serviceSelect.value = target.value;
-      }
-    }
-
-    if (messageField) {
-      const note =
-        "Прошёл(ла) квиз «Карта профессий». Предварительный профиль: " + profileTitle + ".";
-      const existing = messageField.value.trim();
-      messageField.value = existing ? existing + "\n\n" + note : note;
-    }
+  function prefillBookingForm() {
+    // Форма сбора данных временно отключена; QForm будет подключён отдельным этапом.
+    return;
   }
 
   function render() {

@@ -6,12 +6,12 @@ const SITE_CONFIG = {
   workFormat: "Онлайн по России",
   phone: "+7-902-384-83-49",
   email: "katcara@yandex.ru",
-  telegram: "",
+  telegram: "ek_uprof",
   whatsapp: "",
   vk: "",
   max: "",
   domain: "https://ek-uprof.ru",
-  // Предполагаемое имя домена: EK_Uprof.ru → в DNS обычно ek-uprof.ru
+  // QForm будет подключён отдельным этапом
   formEndpoint: "",
   yandexMetrikaId: "",
   contactResponseTime: "",
